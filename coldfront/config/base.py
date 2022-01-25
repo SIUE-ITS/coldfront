@@ -16,6 +16,12 @@ ALLOWED_HOSTS = ENV.list('ALLOWED_HOSTS', default=['*'])
 DEBUG = ENV.bool('DEBUG', default=False)
 WSGI_APPLICATION = 'coldfront.config.wsgi.application'
 ROOT_URLCONF = 'coldfront.config.urls'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+Q_CLUSTER = {
+    'timeout': 30,
+    'retry': 60
+}
 
 SECRET_KEY = ENV.str('SECRET_KEY', default='')
 if len(SECRET_KEY) == 0:
@@ -104,6 +110,9 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django_settings_export.settings_export',
             ],
+            'libraries' : {
+                'staticfiles': 'django.templatetags.static',
+            }
         },
     },
 ]
