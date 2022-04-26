@@ -4,9 +4,9 @@ bibtexparser==1.2.0
 blessed==1.19.1
 certifi==2021.10.8
 chardet==4.0.0
-charset-normalizer==2.0.10
-Django==3.2.11
-django-crispy-forms==1.14.0
+Django==3.2.13
+django-crispy-forms==1.13.0
+Faker==11.3.0
 django-environ==0.8.1
 django-model-utils==4.2.0
 django-picklefield==3.0.1
